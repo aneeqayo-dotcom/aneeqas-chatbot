@@ -1,0 +1,11 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+static/planner_*.png
+.DS_Store
+.vscode/
+*.log
+*.db
+*.sqlite3

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wi Ha Joon - Your AI Schedule Generator (Developed by Aneeqa)</title>
+
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="brand">
+                <i class="fas fa-calendar-check"></i>
+                <div class="brand-text">
+                    <h2>Wi Ha Joon</h2>
+                    <span class="developer-credit">Developed by Aneeqa</span>
+                </div>
+            </div>
+            <p class="tagline">Your Schedule Architect</p>
+
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <button class="quick-btn" data-prompt="Create a daily study schedule for a medical student">
+                    <i class="fas fa-user-graduate"></i> Student Timetable
+                </button>
+                <button class="quick-btn" data-prompt="Generate a weekly work schedule for a remote software developer">
+                    <i class="fas fa-briefcase"></i> Work Planner
+                </button>
+                <button class="quick-btn" data-prompt="Create a balanced daily routine including exercise, work, and relaxation">
+                    <i class="fas fa-heartbeat"></i> Lifestyle Planner
+                </button>
+                <button class="quick-btn" data-prompt="Generate a study schedule with Pomodoro technique">
+                    <i class="fas fa-clock"></i> Pomodoro Schedule
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <!-- Removed Focus Mode and Generate Schedule Image -->
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=Wi+Ha+Joon&background=c77dff&color=fff&size=40&bold=true" alt="Wi Ha Joon" />
+                    </div>
+                    <div class="user-details">
+                        <h3>Wi Ha Joon <span class="header-credit">(Developed by Aneeqa)</span></h3>
+                        <p><i class="fas fa-circle online"></i> Online &bull; Schedule Expert</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button id="clearChat"><i class="fas fa-trash-alt"></i></button>
+                    <button id="exportChat"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div class="messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=Wi+Ha+Joon&background=c77dff&color=fff&size=40&bold=true" alt="Wi Ha Joon" />
+                    </div>
+                    <div class="bubble">
+                        <p>Hello! I'm <strong>Wi Ha Joon</strong>, your personal schedule architect. 🏛️</p>
+                        <p>I can create <strong>daily, weekly,</strong> or <strong>monthly</strong> planners for <strong>students, professionals,</strong> or <strong>anyone</strong> who wants to stay organized.</p>
+                        <p>How can I help you today? ✨</p>
+                        <span class="timestamp">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=Wi+Ha+Joon&background=c77dff&color=fff&size=40&bold=true" alt="Wi Ha Joon" />
+                </div>
+                <div class="bubble">
+                    <div class="dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <i class="fas fa-paperclip attachment-icon"></i>
+                    <input type="text" id="messageInput" placeholder="Describe your schedule needs..." autocomplete="off" />
+                    <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="input-footer">
+                    <p><i class="fas fa-robot"></i> Ask for schedules, timetables, or planners</p>
+                    <div class="input-actions">
+                        <button id="voiceBtn"><i class="fas fa-microphone"></i></button>
+                        <button id="imageBtn"><i class="fas fa-image"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Link to External JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
